@@ -11,5 +11,12 @@ export class DriversListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onClickButton(inputValue :string){
+    //alert("vous avez clique!");
+    console.log(inputValue);
+    
+  }
+  onSurvol(){
+    alert("Survole de la zone") }
 
 }

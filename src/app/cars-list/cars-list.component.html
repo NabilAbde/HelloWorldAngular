@@ -4,10 +4,16 @@
 
 {{ age }} ans
 
-<div class="border p-2 bg-dark text-white">
+<div class="text-center shadow border p-5 bg-dark text-danger">
   <h1>{{ game.title }}</h1>
   <p>Support : {{ game.support }}</p>
   <p>Multi : {{ game.multi }} joueurs</p>
   <p>Stock : {{ getStock() - 100 }} en stock</p>
-  <p>Stock : {{ getWakeUp() }} en stock</p>
+ 
+
+  <img [src]="coverImage" alt="{{ game.title }}">
+  <button class="my-3 btn btn-success" [disabled]="isNotAvailable()">Commander</button>
+
+<input class="form-control" type="text" [value]="userEmail">
+
 </div>
