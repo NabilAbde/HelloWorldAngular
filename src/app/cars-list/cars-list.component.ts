@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsListComponent implements OnInit {
 
+  vehiculeUn : any ={
+    name : "Mercedes by AMG",
+    price: "42000"};
+
+  vehiculeDeux : any ={
+    name : "Range Rover Evoque",
+    price: "55000"};
+  vehiculeTrois : any ={
+    name : "Ferrari F50 Ultra X",
+    price: "350000"};
+
   constructor() { }
 
   ngOnInit(): void {
