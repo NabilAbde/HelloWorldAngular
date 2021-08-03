@@ -6,6 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cars-list.component.css']
 })
 export class CarsListComponent implements OnInit {
+ 
+ enfantUn:string = "Andrea";
+
+ enfantDeux:string ="Fille";
+
+ enfantTrois:string = "Garcon";
+ 
+ 
+ 
+ 
   // 1er exmple d interpolation
   // any quand on ne sait pas quel type (string , int)
 mardiMatin:any ="Ils ont l air bien OFF";
