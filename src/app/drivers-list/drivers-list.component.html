@@ -1,16 +1,23 @@
 <h1 class="my-5">
     Nos Pilotes
+    <!--Example directive structurelle
 </h1>
 
-<div *ngIf="isOnline" class ="p-5 card bg-danger">
+<div *ngIf="isOnline" class="p-5 card bg-danger">
     <h2>{{book.title}}</h2>
     <p>{{book.author}}</p>
 
     <p>
 
-<span *ngIf="book.price"> Prix : {{book.price}} € </span>
-
-<span *ngIf="book.price== null"> Non communiqué </span>
+        <span *ngIf="book.price && book.price > 0">{{book.price}} € </span>
+        <span *ngIf="book.price == null || book.price <=0">Non communiqué</span>
 
     </p>
-</div>
+</div> -->
+
+<ul>
+
+    <li></li>
+    <li></li>
+</ul>
+

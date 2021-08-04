@@ -9,11 +9,14 @@ export class DriversListComponent implements OnInit {
 
 isOnline:boolean = true;
 
-book:any = {
+/*book:any = {
   title :"Le secret des croisades",
   author : "ThoasAndrea",
-  price : null
-}
+  price : -1
+
+}*/
+
+games :string[]= ["Zelda", "Mario", "Outrun"]
 
   constructor() { }
 
