@@ -1,3 +1,16 @@
 <h1 class="my-5">
     Nos Pilotes
 </h1>
+
+<div *ngIf="isOnline" class ="p-5 card bg-danger">
+    <h2>{{book.title}}</h2>
+    <p>{{book.author}}</p>
+
+    <p>
+
+<span *ngIf="book.price"> Prix : {{book.price}} € </span>
+
+<span *ngIf="book.price== null"> Non communiqué </span>
+
+    </p>
+</div>

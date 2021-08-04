@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DriversListComponent implements OnInit {
 
+isOnline:boolean = true;
+
+book:any = {
+  title :"Le secret des croisades",
+  author : "ThoasAndrea",
+  price :null
+}
+
   constructor() { }
 
   ngOnInit(): void {
