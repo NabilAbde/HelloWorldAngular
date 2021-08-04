@@ -12,7 +12,7 @@ isOnline:boolean = true;
 book:any = {
   title :"Le secret des croisades",
   author : "ThoasAndrea",
-  price :null
+  price : null
 }
 
   constructor() { }
