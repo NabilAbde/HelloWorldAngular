@@ -7,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsListComponent implements OnInit {
 
+
 carUpdate :any
 
   vehiculeUn : any ={
   name: "Pagani huayra",
     pays: "Italie",
     power: "765",
-    perf: 3.2};
-
+    perf: 3.2,};
+    
   vehiculeDeux : any ={
     name: "Koenigsegg agera rs",
     pays: "Suède",
