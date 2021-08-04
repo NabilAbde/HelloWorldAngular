@@ -14,6 +14,7 @@ import { DriversListComponent } from './drivers-list/drivers-list.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { CarItemComponent } from './cars-list/car-item/car-item.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CarItemComponent } from './cars-list/car-item/car-item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }], // In providers array of @NgModule pour avoir la date en francais
   bootstrap: [AppComponent]
