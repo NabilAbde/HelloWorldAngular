@@ -1,7 +1,7 @@
 <div class="card border-warning p-3 m-2 shadow" style="max-width: 20rem">
-  <div class="card-header">{{ vehicule.name }}</div>
+  <div class="card-header text-center">{{ vehicule.name }}</div>
   <div class="card-body mt-2 text-center">
-    <p class="card-title">{{ vehicule.pays }}</p>
+    <p class="card-title">Origine : {{ vehicule.pays }}</p>
     <p class="card-title">{{ vehicule.power }} Cv/p>
     <p class="card-title">0 à 100 : {{ vehicule.perf }} s</p>
 
@@ -9,7 +9,7 @@
 
 
     <div>
-      <div>{{ bookingMsg }}</div>
+      <div class="my-2">{{ bookingMsg }}</div>
       <button class="btn btn-primary" (click)="onClickButton()" [disabled]="isNotAvailable"> Reservez </button>
     </div>
   </div>
