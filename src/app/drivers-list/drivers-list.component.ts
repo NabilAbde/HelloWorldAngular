@@ -18,7 +18,9 @@ book:any = {
 
 games :string[]= ["Zelda", "Mario", "Outrun"]
 colorOne:string = "blue";
+colorTwo:string = "white";
 onOff:any =true;
+marginPts : string = "50px";
 
 
   constructor() { }

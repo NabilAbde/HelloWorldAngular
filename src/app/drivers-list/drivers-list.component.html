@@ -48,3 +48,16 @@
     <span *ngIf="!onOff">Vert ✔</span>
     <span *ngIf="onOff">Bleu 💙</span>
 </button>
+
+<!--ngStyle-->
+<div [ngStyle]="{
+    color:colorTwo, 
+    margin:marginPts, 
+    padding: '20px',
+    backgroundColor:onOff ? colorOne : getCouleur() }">
+
+    et du ngStyle la difference ?
+    Declare un objet dans
+    donc on en mettre plusieurs;;;; DONC PlUS DE POSSIBILITE
+<!--ICi ON DECLARE UN OBJET avec possibilite de mettre des propriétés/valeur -->
+</div>
