@@ -19,13 +19,16 @@ book:any = {
 games :string[]= ["Zelda", "Mario", "Outrun"]
 colorOne:string = "blue";
 colorTwo:string = "white";
+
 onOff:any =true;
+
 marginPts : string = "50px";
 
 product:any = {
     label :"iphone 12",
     price : 1215,
-    stock :0
+    stock : 0,
+    image: "https://c0.lestechnophiles.com/images.frandroid.com/wp-content/uploads/2020/10/iphone-12-frandroid-2020.png?resize=580,580"
     
 
 }
