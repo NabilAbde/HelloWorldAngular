@@ -16,7 +16,7 @@ carUpdate :any
   name: "Pagani huayra",
     pays: null,
     coverImage:"./assets/cars/pagani.jpg",
-    power: null,
+    power: 765,
     perf: null},
 
     {
