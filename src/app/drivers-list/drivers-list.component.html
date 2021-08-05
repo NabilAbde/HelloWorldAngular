@@ -1,6 +1,6 @@
 <h1 class="my-5">
     Nos Pilotes
-    <!--Example directive structurelle
+    Example directive structurelle
 </h1>
 
 <div *ngIf="isOnline" class="p-5 card bg-danger">
@@ -13,13 +13,38 @@
         <span *ngIf="book.price == null || book.price <=0">Non communiqué</span>
 
     </p>
-</div> -->
+</div>
 
 <ul class="my-5">
 
     <li *ngFor="let game of games">{{ game}}</li>
-    
+
 </ul>
-<p *ngFor="let x of games; let i =index">{{ i}} {{ x}}</p><!--Affichage de  l index avec position-->
-<p *ngFor="let x of games; let i =index">{{ i}} {{ x | uppercase}}</p> <!--Ajout d un pipe uppercase Affichage de  l index avec position-->
-// DOCUMENT OBJET MODEL ----> NODE DEMO !
+<p *ngFor="let x of games; let i =index">{{ i}} {{ x}}</p>
+<!--Affichage de  l index avec position-->
+<p *ngFor="let x of games; let i =index">{{ i}} {{ x | uppercase}}</p>
+<!--Ajout d un pipe uppercase Affichage de  l index avec position-->
+// DOCUMENT OBJET MODEL ----> NODE DEMO !-->
+
+<p [style.color]="colorOne">
+    <!-- prend soit une variable-->
+    Style.color est une couleur en props !
+</p>
+
+<p [style.color]="getCouleur()">
+    <!-- prend soit une methode-->
+    Style.color fonctionne aussi avec une methode !
+</p>
+<p [style.color]="'gold'">
+    <!-- ou un statement valide-->
+    Style.color ou comme ca mais pas ouf!
+</p>
+
+<div [style.background-color]="onOff ? colorOne : getCouleur()">
+    Affichage selon un condition
+</div><!-- condition ? ici c est un ternaire avec ?🤦‍♂️-->
+
+<button (click)="onSwitch()" class="btn btn-info my-5">
+    <span *ngIf="!onOff">Vert ✔</span>
+    <span *ngIf="onOff">Bleu</span>
+</button>
