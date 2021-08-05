@@ -14,10 +14,10 @@ carUpdate :any
     cars :any = [
       {
   name: "Pagani huayra",
-    pays: "Italie",
+    pays: null,
     coverImage:"./assets/cars/pagani.jpg",
-    power: "765",
-    perf: 3.2,},
+    power: null,
+    perf: null},
 
     {
     name: "Koenigsegg agera rs",

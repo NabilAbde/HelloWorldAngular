@@ -19,7 +19,7 @@ export class CarItemComponent implements OnInit {
   onClickButton() {
 
     this.isNotAvailable = true; // ou !this.isNotAvailable
-    this.bookingMsg = "Bonne route avec Drive-X";
+    this.bookingMsg = "Votre reservation est enregistrée ! Bonne route avec Drive-X 😎";
   }
 
 

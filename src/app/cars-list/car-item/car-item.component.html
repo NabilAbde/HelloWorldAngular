@@ -1,16 +1,29 @@
 <div class="card border-warning p-3 m-2 shadow" style="max-width: 20rem">
-  
-  <div class="card-header text-center">{{ vehicule.name }}</div>
+
+  <div class="card-header text-center">{{ vehicule.name | uppercase}}</div>
   <img [src]="vehicule.coverImage" class="img-fluid" alt="photo {{vehicule.name}}">
-        <hr>
+  <hr>
   <div class="card-body mt-2 text-center">
-    <p class="card-title">Origine : {{ vehicule.pays }}</p>
-    <p class="card-title">{{ vehicule.power }} Cv/p>
-    <p class="card-title">0 à 100 : {{ vehicule.perf }} s</p>
- 
 
 
+    <p class="card-title">Puissance :
+      <span *ngIf="vehicule.power">{{ vehicule.power }} Cv</span>
+      <span *ngIf="vehicule.power == null">Non communique</span>
+    </p>
 
+
+    <p>0 à 100 :
+      <span *ngIf="vehicule.perf == null OR vehicule.perf <= 0 ">Non communique</span>
+      <span *ngIf="vehicule.perf > 0 ">{{ vehicule.perf }} s </span>
+    </p>
+
+    <p>Origine :
+      <span *ngIf="vehicule.pays == null ">Non communique</span>
+      {{ vehicule.pays }}
+    </p>
+    <!--<span *ngIf="vehicule.pays ==null">Non communique </span>
+      <span *ngIf="vehicule.pays !empty">{{ vehicule.pays }} </span>
+    </p>-->
 
     <div>
       <div class="my-2">{{ bookingMsg }}</div>
