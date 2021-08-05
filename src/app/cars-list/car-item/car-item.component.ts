@@ -20,6 +20,7 @@ export class CarItemComponent implements OnInit {
 
     this.isNotAvailable = true; // ou !this.isNotAvailable
     this.bookingMsg = "Votre reservation est enregistrée ! Bonne route avec Drive-X 😎";
+   
   }
 
 
