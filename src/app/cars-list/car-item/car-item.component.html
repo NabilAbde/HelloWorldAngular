@@ -1,4 +1,6 @@
 <div class="card border-warning p-3 m-2 shadow" style="max-width: 20rem">
+  <img [src]="vehicule.coverImage" class="img-fluid" alt="photo {{vehicule.name}}">
+        <hr>
   <div class="card-header text-center">{{ vehicule.name }}</div>
   <div class="card-body mt-2 text-center">
     <p class="card-title">Origine : {{ vehicule.pays }}</p>
