@@ -22,6 +22,14 @@ colorTwo:string = "white";
 onOff:any =true;
 marginPts : string = "50px";
 
+product:any = {
+    label :"iphone 12",
+    price : 1215,
+    stock :0
+    
+
+}
+
 
   constructor() { }
 

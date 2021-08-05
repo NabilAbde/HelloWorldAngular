@@ -61,3 +61,28 @@
     donc on en mettre plusieurs;;;; DONC PlUS DE POSSIBILITE
 <!--ICi ON DECLARE UN OBJET avec possibilite de mettre des propriétés/valeur -->
 </div>
+
+<p [ngClass]="{'text-center':true}">
+Un span quoi ! Ng Class ❤
+</p>
+
+<div class="card shadow tex-center">
+
+    <h2>{{product.label}}</h2>
+    <hr>
+    <p>{{product.price}} €</p>
+    <p>Quantité : 
+       <span [ngClass]="{
+           'badge' : true,
+
+           'badge-success' : product.stock > 5,
+
+           'badge-warning' : product.stock <= 5,
+
+           'badge-danger' : product.stock == 0
+       }">
+       {{product.stock}} en stock</span>
+        
+        </p>
+
+</div>
