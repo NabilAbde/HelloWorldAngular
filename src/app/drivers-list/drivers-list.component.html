@@ -15,9 +15,11 @@
     </p>
 </div> -->
 
-<ul>
+<ul class="my-5">
 
-    <li></li>
-    <li></li>
+    <li *ngFor="let game of games">{{ game}}</li>
+    
 </ul>
-
+<p *ngFor="let x of games; let i =index">{{ i}} {{ x}}</p><!--Affichage de  l index avec position-->
+<p *ngFor="let x of games; let i =index">{{ i}} {{ x | uppercase}}</p> <!--Ajout d un pipe uppercase Affichage de  l index avec position-->
+// DOCUMENT OBJET MODEL ----> NODE DEMO !
