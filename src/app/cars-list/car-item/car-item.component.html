@@ -9,15 +9,15 @@
     <p class="card-title">Puissance :
       <span *ngIf="vehicule.power">{{ vehicule.power }} Cv</span>
       <span *ngIf="vehicule.power == null">Non communique</span>
-      <span [ngClass]="{
+      <p [ngClass]="{
            'badge' : true,
 
            'badge-info' : vehicule.power < 1000,
 
-           'badge-warning' : vehicule.power > 1000
+           'badge-warning' : vehicule.power >= 1000
 
     
-       }"></span>
+       }">{{ vehicule.power }} Cv
     </p>
 
 
