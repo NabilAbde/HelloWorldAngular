@@ -10,19 +10,18 @@
     <hr>
     <div class="card-body mt-2 text-center">
 
-        <p>Origine :
+        <p>Origine : {{ driver.pays | uppercase}}
             <span *ngIf="driver.pays == null ">Non communique</span>
-            {{ driver.pays | uppercase}}
         </p>
 
 
         <p>Discipline :
-            <span *ngIf="driver.category == null ">Non communique</span>{{ driver.category | uppercase}}
+            <span class="badge text-dark" *ngIf="driver.category " [style.background-color]= getColor()>{{ driver.category | uppercase}}</span>
+            <span *ngIf="driver.category == null ">Non communique</span>
              </p>
 
         <button (click) = "OnClickGood()" class="btn btn-success" type="button" name="button"><i class="far fa-thumbs-up"></i></button>
-        <button (click) = "OnClickBad()" class="btn btn-danger" type="button" name="button"><i class="far fa-thumbs-up"></i></button>
-
+        <button (click) = "OnClickBad()" class="btn btn-danger" type="button" name="button"><i class="far fa-thumbs-down"></i></button>
 
 
     </div>

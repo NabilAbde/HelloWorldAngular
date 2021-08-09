@@ -37,7 +37,7 @@ export class DriversItemComponent implements OnInit {
       return "green";
     }
     if(this.driver.category == "formule 1"){
-      return "black";
+      return "orange";
     }
     else{
       return "white";

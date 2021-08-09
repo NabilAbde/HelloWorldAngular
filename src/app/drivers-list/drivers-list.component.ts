@@ -10,9 +10,9 @@ export class DriversListComponent implements OnInit {
   drivers: any = [
     {
       fullName: "ken block",
-      pays: "usa",
+      pays: null,
       coverImage: "./assets/drivers/kenblock.jpg",
-      category: "gymkhana",
+      category: null,
       likeIts: -1
     },
     {
