@@ -1,1 +1,40 @@
-<p>drivers-item works!</p>
+<div class="card border-warning p-3 m-2 shadow" style="max-width: 20rem">
+
+  <div class="card-header bg-dark text-white text-center">{{ driver.fullName | uppercase}}</div>
+  <img [src]="driver.coverImage" class="img-fluid" alt="photo {{driver.fullname}}">
+  <hr>
+  <div class="card-body mt-2 text-center">
+
+
+    <p class="card-title">Discipline :
+      <span *ngIf="driver.category">{{ driver.category }} </span>
+      <span *ngIf="driver.category == null">Non communique</span>
+      <p [ngClass]="{
+           'badge' : true,
+
+           'badge-info' : driver.category <0,
+
+           'badge-warning' : driver.category >= 0
+
+    
+       }">{{ driver.LikeIts }}
+    </p>
+
+
+    <p>Discipline :
+      <span *ngIf="driver.category == null ">Non communique</span>{{ driver.category }}
+   
+       </p>
+       
+
+    <p>Origine :
+      <span *ngIf="driver.pays == null ">Non communique</span>
+      {{ driver.pays }}
+    </p>
+    
+    
+  </div>
+</div>
+
+
+

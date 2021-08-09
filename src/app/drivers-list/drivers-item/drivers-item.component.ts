@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-drivers-item',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DriversItemComponent implements OnInit {
 
+  @Input() driver: any // decorateur qui sera appele dans le parent drivers-list <app-drivers-item [driver]="piloteUn"></app-drivers-item>
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
+
