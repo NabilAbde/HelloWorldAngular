@@ -1,40 +1,29 @@
-<div class="card border-warning p-3 m-2 shadow" style="max-width: 20rem">
-
-  <div class="card-header bg-dark text-white text-center">{{ driver.fullName | uppercase}}</div>
-  <img [src]="driver.coverImage" class="img-fluid" alt="photo {{driver.fullname}}">
-  <hr>
-  <div class="card-body mt-2 text-center">
-
-
-    <p class="card-title">Discipline :
-      <span *ngIf="driver.category">{{ driver.category }} </span>
-      <span *ngIf="driver.category == null">Non communique</span>
-      <p [ngClass]="{
-           'badge' : true,
-
-           'badge-info' : driver.category <0,
-
-           'badge-warning' : driver.category >= 0
-
+<div class="card p-3 m-2 shadow" style="max-width: 20rem"
+[ngClass]="{
+    'border-danger': driver.likeIts <0,
+    'border-success': driver.likeIts >0
     
-       }">{{ driver.LikeIts }}
-    </p>
+}">
+
+    <div class="card-header bg-dark text-white text-center">{{ driver.fullName | uppercase}}</div>
+    <img [src]="driver.coverImage" class="img-fluid" alt="photo {{driver.fullname}}">
+    <hr>
+    <div class="card-body mt-2 text-center">
+
+        <p>Origine :
+            <span *ngIf="driver.pays == null ">Non communique</span>
+            {{ driver.pays | uppercase}}
+        </p>
 
 
-    <p>Discipline :
-      <span *ngIf="driver.category == null ">Non communique</span>{{ driver.category }}
-   
-       </p>
-       
+        <p>Discipline :
+            <span *ngIf="driver.category == null ">Non communique</span>{{ driver.category | uppercase}}
+             </p>
 
-    <p>Origine :
-      <span *ngIf="driver.pays == null ">Non communique</span>
-      {{ driver.pays }}
-    </p>
-    
-    
-  </div>
+        <button (click) = "OnClickGood()" class="btn btn-success" type="button" name="button"><i class="far fa-thumbs-up"></i></button>
+        <button (click) = "OnClickBad()" class="btn btn-danger" type="button" name="button"><i class="far fa-thumbs-up"></i></button>
+
+
+
+    </div>
 </div>
-
-
-

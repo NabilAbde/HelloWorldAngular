@@ -13,6 +13,36 @@ export class DriversItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  OnClickGood (){
+    this.driver.likeIts = this.driver.likeIts +1;
+    return this.driver.likeIts;
+
+  }
+  OnClickBad (){
+    this.driver.likeIts = this.driver.likeIts -1;
+    return this.driver.likeIts;
+
+  }
+  getColor(){
+    if(this.driver.category == "gymkhana"){
+      return "blue";
+    }
+    if(this.driver.category == "nascar"){
+      return "red";
+    }
+    if(this.driver.category == "rallye"){
+      return "yellow";
+    }
+    if(this.driver.category == "drag"){
+      return "green";
+    }
+    if(this.driver.category == "formule 1"){
+      return "black";
+    }
+    else{
+      return "white";
+    }
+  }
 
 }
 

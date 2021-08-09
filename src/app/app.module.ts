@@ -16,6 +16,7 @@ import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { CarItemComponent } from './cars-list/car-item/car-item.component';
 import { FormsModule } from '@angular/forms';
 import { DriversItemComponent } from './drivers-list/drivers-item/drivers-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DriversItemComponent } from './drivers-list/drivers-item/drivers-item.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }], // In providers array of @NgModule pour avoir la date en francais
   bootstrap: [AppComponent]
