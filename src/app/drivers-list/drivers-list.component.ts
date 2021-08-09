@@ -64,7 +64,7 @@ export class DriversListComponent implements OnInit {
       category: "drag",
       likeIts: 0
     },
-    
+
   ];
 
   constructor() { }

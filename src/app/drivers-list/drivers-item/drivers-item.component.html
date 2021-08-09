@@ -1,9 +1,9 @@
-<div class="card p-3 m-2 shadow" style="max-width: 20rem"
-[ngClass]="{
+<div class="card p-3 m-2 shadow" style="max-width: 20rem" [ngClass]="{
     'border-danger': driver.likeIts <0,
     'border-success': driver.likeIts >0
     
 }">
+    <!-- utilisation de la directive  attribut [ngClass] pour changer la couleur de la bordure-->
 
     <div class="card-header bg-dark text-white text-center">{{ driver.fullName | uppercase}}</div>
     <img [src]="driver.coverImage" class="img-fluid" alt="photo {{driver.fullname}}">
@@ -11,17 +11,26 @@
     <div class="card-body mt-2 text-center">
 
         <p>Origine : {{ driver.pays | uppercase}}
+            <!-- utilisation du pipe uppercase pour mettre le nom du pilote en majuscule-->
             <span *ngIf="driver.pays == null ">Non communique</span>
         </p>
 
 
         <p>Discipline :
-            <span class="badge text-dark" *ngIf="driver.category " [style.background-color]= getColor()>{{ driver.category | uppercase}}</span>
+            <span class="badge text-dark" *ngIf="driver.category " [style.background-color]=getColor()>{{
+                driver.category | uppercase}}</span>
             <span *ngIf="driver.category == null ">Non communique</span>
-             </p>
+            <!-- utilisation de directive structurelle ngIf pour appler la fonction du changement de couleur de fond par categorie et afficher Non communique si null-->
+        </p>
 
-        <button (click) = "OnClickGood()" class="btn btn-success" type="button" name="button"><i class="far fa-thumbs-up"></i></button>
-        <button (click) = "OnClickBad()" class="btn btn-danger" type="button" name="button"><i class="far fa-thumbs-down"></i></button>
+
+        <p>{{ driver.fullName | titlecase}} a obtenu {{ driver.likeIts }} like<span
+                *ngIf="driver.likeIts > 1 || driver.likeIts < -1">s</span></p>
+        <!-- utilisation du event binding pour ajouter un evenement au clic-->
+        <button (click)="onClickGood()" class="btn btn-success m-2" type="button" name="button"><i
+                class="far fa-thumbs-up"></i></button>
+        <button (click)="onClickBad()" class="btn btn-danger" type="button" name="button"><i
+                class="far fa-thumbs-down"></i></button>
 
 
     </div>

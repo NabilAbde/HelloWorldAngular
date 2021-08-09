@@ -7,39 +7,40 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DriversItemComponent implements OnInit {
 
-  @Input() driver: any // decorateur qui sera appele dans le parent drivers-list <app-drivers-item [driver]="piloteUn"></app-drivers-item>
+  @Input() driver: any // decorateur qui sera appele dans le parent driver-list 
 
   constructor() { }
 
+
   ngOnInit(): void {
   }
-  OnClickGood (){
-    this.driver.likeIts = this.driver.likeIts +1;
+  onClickGood() { // creation  des fonctions pour le clic et la couleur de la categorie
+    this.driver.likeIts = this.driver.likeIts + 1;
     return this.driver.likeIts;
 
   }
-  OnClickBad (){
-    this.driver.likeIts = this.driver.likeIts -1;
+  onClickBad() {
+    this.driver.likeIts = this.driver.likeIts - 1;
     return this.driver.likeIts;
 
   }
-  getColor(){
-    if(this.driver.category == "gymkhana"){
+  getColor() {
+    if (this.driver.category == "gymkhana") {
       return "blue";
     }
-    if(this.driver.category == "nascar"){
+    if (this.driver.category == "nascar") {
       return "red";
     }
-    if(this.driver.category == "rallye"){
+    if (this.driver.category == "rallye") {
       return "yellow";
     }
-    if(this.driver.category == "drag"){
+    if (this.driver.category == "drag") {
       return "green";
     }
-    if(this.driver.category == "formule 1"){
+    if (this.driver.category == "formule 1") {
       return "orange";
     }
-    else{
+    else {
       return "white";
     }
   }
