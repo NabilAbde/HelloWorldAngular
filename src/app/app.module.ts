@@ -15,6 +15,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { CarItemComponent } from './cars-list/car-item/car-item.component';
 import { FormsModule } from '@angular/forms';
+import { DriversItemComponent } from './drivers-list/drivers-item/drivers-item.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     DriversListComponent,
     HomePageComponent,
     FourOhFourComponent,
-    CarItemComponent
+    CarItemComponent,
+    DriversItemComponent
   ],
   imports: [
     BrowserModule,
