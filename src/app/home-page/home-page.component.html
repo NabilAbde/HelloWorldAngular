@@ -10,5 +10,13 @@
     <a class="btn btn-primary btn-lg" href="#" role="button">eXotic Cars</a>
   </p>
 </div>
- <p>{{test}}</p>
- <p>{{cars.name}}</p>
+ 
+ <h2 class="my-5 text-center">Nos pilotes d 'exception</h2>
+<div class="card-deck  justify-content-center">
+  <app-drivers-item *ngFor="let oneDriver of bestDrivers" [driver]="oneDriver"></app-drivers-item>
+</div>
+
+<h2 class="my-5 text-center">Nos meilleures voitures</h2>
+<div class="card-deck  justify-content-center">
+  <app-car-item *ngFor="let oneCar of bestCars" [vehicule]="oneCar"></app-car-item>
+</div>

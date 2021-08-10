@@ -5,54 +5,57 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  test: string = "essai pour voir si ca marche ";
-  
-       cars :any = [
-      {
-  name: "Pagani huayra",
-    pays: null,
-    coverImage:"./assets/cars/pagani.jpg",
-    power: 765,
-    perf: null},
+
+  test: string = "test dataservice";
+
+  cars: any = [
+    {
+      name: "Pagani huayra",
+      pays: null,
+      coverImage: "./assets/cars/pagani.jpg",
+      power: 765,
+      perf: null
+    },
 
     {
-    name: "Koenigsegg agera rs",
-    pays: "Suède",
-    coverImage:"./assets/cars/koenigsegg.jpg",
-    power: 1383,
-    perf: 2.6},
-   {
+      name: "Koenigsegg agera rs",
+      pays: "Suède",
+      coverImage: "./assets/cars/koenigsegg.jpg",
+      power: 1383,
+      perf: 2.6
+    },
+    {
       name: "zenvo tsr s",
       pays: "Danemark",
-      coverImage:"./assets/cars/zenvo.jpg",
+      coverImage: "./assets/cars/zenvo.jpg",
       power: 1200,
       perf: 2.8
     },
     {
       name: "bugatti chiron",
       pays: "France",
-      coverImage:"./assets/cars/bugatti.jpg",
+      coverImage: "./assets/cars/bugatti.jpg",
       power: 1500,
       perf: 2.4
     },
     {
       name: "mercedes amg one",
       pays: "Allemagne",
-      coverImage:"./assets/cars/mercedes.jpg",
+      coverImage: "./assets/cars/mercedes.jpg",
       power: 1000,
       perf: 2.2
     },
     {
       name: "ferrari sf90",
       pays: "Italie",
-      coverImage:"./assets/cars/ferrari.jpg",
+      coverImage: "./assets/cars/ferrari.jpg",
       power: 1000,
       perf: 2.5
     }
 
-    ]
+  ]
 
-     drivers: any = [
+  drivers: any = [
     {
       fullName: "ken block",
       pays: null,
@@ -114,23 +117,25 @@ export class DataService {
 
   constructor() { }
 
-getTest() :string {
-        return this.test;
-      //  console.log(this.fruit);  
-    }
+  getAllCars(): any {
+    return this.cars;
 
-    getAllCars() :any {
-      return this.cars;
+  }
 
-    }
+  getAllDrivers() {
+    return this.drivers;
 
-    getAllDrivers() {
-      return this.drivers;
+  }
+  getNbBestDrivers(nb: number) {
+    var allDrivers = this.drivers.slice();
+    allDrivers.sort((b: { likeIts: number; }, a: { likeIts: number; }) => { return a.likeIts - b.likeIts });
+    return allDrivers.slice(allDrivers.lenght, nb);
 
-    }
+  }
+  getNbPowerfullCars(nb: number) {
+    var allCars = this.cars.slice();
+    allCars.sort((carB: { power: number; }, carA: { power: number; }) => { return carA.power - carB.power });
+    return allCars.slice(allCars.lenght, nb);
 
-
-
-
+  }
 }
-

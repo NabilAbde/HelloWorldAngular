@@ -12,9 +12,11 @@ export class CarsListComponent implements OnInit {
 carUpdate :any
 
 
-    cars: any = this.car.getAllCars();
+    cars: any; 
 
-  constructor(private car:DataService) { }
+  constructor(private data:DataService) {
+    this.cars =this.data.getAllCars();
+   }
 
   ngOnInit(): void {
     this.carUpdate = new Date();

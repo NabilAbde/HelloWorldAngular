@@ -8,11 +8,13 @@ import { DataService } from '../services/data.service';
 })
 export class DriversListComponent implements OnInit {
 
- drivers: any = this.driver.getAllDrivers();
+  drivers: any;
 
-  constructor(private driver:DataService) { }
-
+constructor(private data: DataService) { 
+  this.drivers = this.data.getAllDrivers();
+ }
   ngOnInit(): void {
+    
   }
 
 }
