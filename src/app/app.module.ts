@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { DriversItemComponent } from './drivers-list/drivers-item/drivers-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { BananeService } from './services/exempleservices';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FormsModule,
     FontAwesomeModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }], // In providers array of @NgModule pour avoir la date en francais
+  providers: [{ provide: LOCALE_ID, useValue: "fr-FR" },
+  BananeService], // In providers array of @NgModule pour avoir la date en francais
   bootstrap: [AppComponent]
 })
 export class AppModule { }
