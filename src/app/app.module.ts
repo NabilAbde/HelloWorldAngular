@@ -17,6 +17,7 @@ import { CarItemComponent } from './cars-list/car-item/car-item.component';
 import { FormsModule } from '@angular/forms';
 import { DriversItemComponent } from './drivers-list/drivers-item/drivers-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DataService } from './services/data.service';
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FormsModule,
     FontAwesomeModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }], // In providers array of @NgModule pour avoir la date en francais
+  providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }, DataService], // In providers array of @NgModule pour avoir la date en francais
   bootstrap: [AppComponent]
 })
 export class AppModule { }
