@@ -5,9 +5,19 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  test :any ="ca s affiche"
+  test: string = "Banane Plantain from API";
+   
 
   constructor() { }
-console: any.log("Test")
-  
+getTest() :string {
+        return this.test;
+      //  console.log(this.fruit);
+        
+        
+    }
+
+
+
+
 }
+
