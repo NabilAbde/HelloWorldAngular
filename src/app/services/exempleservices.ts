@@ -8,7 +8,9 @@ export class BananeService {
     constructor(){}
 
     getFruit(){
+        //return this.fruit;
         console.log(this.fruit);
+        
         
     }
 

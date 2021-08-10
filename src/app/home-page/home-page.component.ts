@@ -10,7 +10,7 @@ export class HomePageComponent implements OnInit {
 
 title ="Drive-X"
 
-//fruit:any =this.banana.getFruit();
+fruit:any =this.banana.getFruit();
 
   constructor(private banana:BananeService) { 
     banana.getFruit();
