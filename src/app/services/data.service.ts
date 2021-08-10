@@ -5,5 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
+  test :any ="ca s affiche"
+
   constructor() { }
+console: any.log("Test")
+  
 }
