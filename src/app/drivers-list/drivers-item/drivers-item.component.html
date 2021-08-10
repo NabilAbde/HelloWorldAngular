@@ -16,12 +16,21 @@
         </p>
 
 
-        <p>Discipline :
+         <p>Discipline :
             <span class="badge text-dark" *ngIf="driver.category " [style.background-color]=getColor()>{{
                 driver.category | uppercase}}</span>
             <span *ngIf="driver.category == null ">Non communique</span>
-            <!-- utilisation de directive structurelle ngIf pour appler la fonction du changement de couleur de fond par categorie et afficher Non communique si null-->
-        </p>
+            <!-- utilisation de directive structurelle ngIf pour appler la fonction du changement de couleur de fond par categorie et afficher Non communique si null -->
+        </p> 
+
+<!-- <p>Discipline :
+            <span *ngIf="driver.category " [ngClass]="{'badge' :true,
+                        'badge-success' : driver.category =='rallye',
+                        'badge-danger' : driver.category =='formule 1'}">  etc etc pour chaque cat
+               {{ driver.category | uppercase}}</span>
+            <span *ngIf="driver.category == null ">Non communique</span>
+           utilisation de directive structurelle ngIf pour appler la fonction du changement de couleur de fond par categorie et afficher Non communique si null
+        </p>-->
 
 
         <p>{{ driver.fullName | titlecase}} a obtenu {{ driver.likeIts }} like<span

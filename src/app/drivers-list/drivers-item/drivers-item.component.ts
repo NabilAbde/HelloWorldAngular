@@ -15,13 +15,13 @@ export class DriversItemComponent implements OnInit {
   ngOnInit(): void {
   }
   onClickGood() { // creation  des fonctions pour le clic et la couleur de la categorie
-    this.driver.likeIts = this.driver.likeIts + 1;
-    return this.driver.likeIts;
+    this.driver.likeIts = this.driver.likeIts + 1; // this.driver.likeIts = this.driver.likeIts ++
+  
 
   }
   onClickBad() {
     this.driver.likeIts = this.driver.likeIts - 1;
-    return this.driver.likeIts;
+ 
 
   }
   getColor() {
