@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { DriversItemComponent } from './drivers-list/drivers-item/drivers-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DataService } from './services/data.service';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { DataService } from './services/data.service';
     HomePageComponent,
     FourOhFourComponent,
     CarItemComponent,
-    DriversItemComponent
+    DriversItemComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
