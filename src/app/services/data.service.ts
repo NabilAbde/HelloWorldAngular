@@ -135,7 +135,7 @@ export class DataService {
   }
   getNbPowerfullCars(nb: number) {
     var allCars = this.cars.slice();
-    allCars.sort((carB: { power: number; }, carA: { power: number; }) => { return carA.power - carB.power });
+    allCars.sort((carB: { power: any; }, carA: { power: any; }) => { return carA.power - carB.power });
     return allCars.slice(0, nb);
 
   }

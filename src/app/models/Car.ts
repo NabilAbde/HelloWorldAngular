@@ -1,11 +1,11 @@
 /**
- * Creation d une classse manuel
+ * Creation d une clase manuel
  * @author Nabil
  */
 
 
 export class Car {
-public name : string;
+/*public name : string;
 public pays : string | null;
 public coverImage : string;
 public power : number;
@@ -18,6 +18,16 @@ constructor(name:string, pays : string | null,coverImage : string,power : number
     this.power = power;
     this.perf = perf;
 
-}
+}*/
+constructor(public name :string,
+            public pays:string,
+            public coverImage : string,
+            public power : number,
+            public perf: any){}
 
 }
+
+
+
+
+
