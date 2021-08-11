@@ -126,16 +126,16 @@ export class DataService {
     return this.drivers;
 
   }
-  getNbBestDrivers(nb: number) {
+  getNbBestDrivers(nb: number) {//nb : number permettra de specifier sur la home page le ombre de pilote ou cars afficher
     var allDrivers = this.drivers.slice();
-    allDrivers.sort((b: { likeIts: number; }, a: { likeIts: number; }) => { return a.likeIts - b.likeIts });
-    return allDrivers.slice(allDrivers.lenght, nb);
+    allDrivers.sort((b: { likeIts: number; }, a: { likeIts: number; }) => { return a.likeIts - b.likeIts });//fonction pour comparer
+    return allDrivers.slice(0, nb);
 
   }
   getNbPowerfullCars(nb: number) {
     var allCars = this.cars.slice();
     allCars.sort((carB: { power: number; }, carA: { power: number; }) => { return carA.power - carB.power });
-    return allCars.slice(allCars.lenght, nb);
+    return allCars.slice(0, nb);
 
   }
 }

@@ -11,10 +11,10 @@ export class DriversListComponent implements OnInit {
   drivers: any;
 
 constructor(private data: DataService) { 
-  this.drivers = this.data.getAllDrivers();
+  
  }
   ngOnInit(): void {
-    
+    this.drivers = this.data.getAllDrivers();
   }
 
 }

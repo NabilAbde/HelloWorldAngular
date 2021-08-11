@@ -15,11 +15,12 @@ carUpdate :any
     cars: any; 
 
   constructor(private data:DataService) {
-    this.cars =this.data.getAllCars();
+    
    }
 
   ngOnInit(): void {
     this.carUpdate = new Date();
+    this.cars =this.data.getAllCars();
 
   }
 
