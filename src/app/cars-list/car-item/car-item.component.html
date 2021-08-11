@@ -21,9 +21,9 @@
     </p>
 
 
-    <p>0 à 100 :
+    <p>0 à 100 :{{ vehicule.perf}}
       <span *ngIf="vehicule.perf == null || vehicule.perf <= 0 ">Non communique</span>
-      <span *ngIf="vehicule.perf > 0 ">{{ vehicule.perf }} s </span>
+      
     </p>
 
     <p>Origine :

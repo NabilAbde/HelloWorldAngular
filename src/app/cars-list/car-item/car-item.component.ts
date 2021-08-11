@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Car } from 'src/app/models/Car';
 
 @Component({
   selector: 'app-car-item',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CarItemComponent implements OnInit {
 
-  @Input() vehicule: any // decorateur qui sera appele dans le parent carslist <app-car-item [vehicule]="vehiculeUn"></app-car-item>
+  @Input() vehicule!: Car  // decorateur qui sera appele dans le parent carslist <app-car-item [vehicule]="vehiculeUn"></app-car-item>
   
   isNotAvailable: boolean = false;
   bookingMsg: string = "Reservez ce véhicule"
