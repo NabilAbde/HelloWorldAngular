@@ -9,7 +9,7 @@ export class DataService {
 
   test: string = "test dataservice";
 
-  cars: Car [] = [
+  cars: Car[] = [
     {
       name: "Pagani huayra",
       pays: "Italie",
@@ -127,7 +127,12 @@ export class DataService {
     return this.drivers;
 
   }
-  getNbBestDrivers(nb: number) {//nb : number permettra de specifier sur la home page le ombre de pilote ou cars afficher
+
+  addCar(car : Car) {
+    this.cars.push(car);
+  }
+
+  getNbBestDrivers(nb: number) {//nb : number permettra de specifier sur la home page le nombre de pilote ou cars afficher
     var allDrivers = this.drivers.slice();
     allDrivers.sort((b: { likeIts: number; }, a: { likeIts: number; }) => { return a.likeIts - b.likeIts });//fonction pour comparer
     return allDrivers.slice(0, nb);
