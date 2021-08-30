@@ -6,7 +6,7 @@
   {{carUpdate | date :"dd MMMM yyyy à H:mm"}}
 
 </div>
-
+<a class="badge badge-primary mx-4 p-2 " routerLink ="/new-car">Ajouter une voiture</a>
 
 <div class="card-deck  justify-content-center">
   <app-car-item *ngFor="let oneCar of cars" [vehicule]="oneCar"></app-car-item>
