@@ -22,10 +22,11 @@ import { FooterComponent } from './footer/footer.component';
 import { NewCarComponent } from './cars-list/new-car/new-car.component';
 import { NewDriverComponent } from './drivers-list/new-driver/new-driver.component';
 import { DataFromApiComponent } from './data-from-api/data-from-api.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     HeaderComponent,
     CarsListComponent,
@@ -44,7 +45,9 @@ import { DataFromApiComponent } from './data-from-api/data-from-api.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
+   
   ],
   providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }, DataService], // In providers array of @NgModule pour avoir la date en francais
   bootstrap: [AppComponent]
