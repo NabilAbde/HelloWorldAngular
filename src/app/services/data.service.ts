@@ -57,7 +57,7 @@ export class DataService {
 
   ]
 
-  drivers: any = [
+  drivers: Driver[] = [
     {
       fullName: "ken block",
       pays: null,
@@ -129,7 +129,7 @@ export class DataService {
 
   }
 
-  addCar(car : Car) {
+  addCar(car: Car) {
     this.cars.push(car);
   }
 
@@ -146,7 +146,7 @@ export class DataService {
 
   }
 
-  addDriver(driver : Driver) {
+  addDriver(driver: Driver) {
     this.drivers.push(driver);
   }
 }

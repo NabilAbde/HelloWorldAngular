@@ -17,7 +17,7 @@ export class DriversListComponent implements OnInit {
 
 constructor(private data: DataService) { }
 
-  spoilDriver :Driver = new Driver("Nabil","./assets/drivers/danicapatrick.jpg","France","Rallye",0);
+  spoilDriver :Driver = new Driver("Nabil","./assets/drivers/NABIL PORTRAIT.jpg","France","Rallye",0);
   
  
   ngOnInit(): void {
