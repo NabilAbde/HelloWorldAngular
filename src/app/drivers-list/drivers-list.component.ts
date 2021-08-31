@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Driver } from '../models/Driver';
 import { DataService } from '../services/data.service';
 
 @Component({
@@ -8,13 +9,20 @@ import { DataService } from '../services/data.service';
 })
 export class DriversListComponent implements OnInit {
 
-  drivers: any;
+  //drivers: any;
 
-constructor(private data: DataService) { 
+  drivers : Driver[] |undefined;
+
+ 
+
+constructor(private data: DataService) { }
+
+  spoilDriver :Driver = new Driver("Nabil","./assets/drivers/danicapatrick.jpg","France","Rallye",0);
   
- }
+ 
   ngOnInit(): void {
     this.drivers = this.data.getAllDrivers();
+    this.data.drivers.push(this.spoilDriver);
   }
 
 }

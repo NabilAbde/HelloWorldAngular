@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Car } from '../models/Car';
+import { Driver } from '../models/Driver';
 
 @Injectable({
   providedIn: 'root'
@@ -143,5 +144,9 @@ export class DataService {
     allCars.sort((carB: { power: any; }, carA: { power: any; }) => { return carA.power - carB.power });
     return allCars.slice(0, nb);
 
+  }
+
+  addDriver(driver : Driver) {
+    this.drivers.push(driver);
   }
 }
