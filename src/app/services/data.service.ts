@@ -7,6 +7,8 @@ import { Driver } from '../models/Driver';
 })
 export class DataService {
 
+  categories :string[] = ["gymkhana","nascar","rallye","formule 1", "drag"]
+
 
   test: string = "test dataservice";
 
@@ -127,6 +129,9 @@ export class DataService {
   getAllDrivers() {
     return this.drivers;
 
+  }
+  getAllCategories() {
+    return this.categories;
   }
 
   addCar(car: Car) {

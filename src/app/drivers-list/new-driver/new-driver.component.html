@@ -3,15 +3,24 @@
 
   <form (ngSubmit)="onSubmit()" [formGroup]="driverForm">
     <div class="form-group">
-      <label for="name">Nom du pilote</label>
+      <label for="name">Nom du pilote
+        <span class="text-danger" *ngIf="driverForm.controls['fullName'].errors && driverForm.controls['fullName'].hasError('required') ">*</span>
+      </label>
       <input type="text" class="form-control" id="name" formControlName="fullName" placeholder="Nom du pilote" required>
+      <small class="badge badge-danger my-2" *ngIf="driverForm.controls['fullName'].hasError('required') &&  driverForm.controls['fullName'].touched " >
+
+          Ce champs est requis
+        </small>
     </div>
 
-    <div class="form-group">
-      <label for="pays">Pays d'origine</label>
-      <input type="text" class="form-control" id="pays" formControlName="pays" placeholder="Pays" required>
-    </div>
+   <div class="form-group">
+        <label for="pays">Pays d'origine</label>
+        <input type="text" class="form-control" formControlName="pays" id="pays" required>
 
+        <small class="badge badge-danger my-2" *ngIf="driverForm.controls['pays'].hasError('minlength')">
+            Minimum {{ minLong }} caractères requis.
+        </small>
+      </div> 
 
 
     <div class="form-group">
@@ -22,8 +31,19 @@
 
     <div class="form-group">
       <label for="category">Discipline</label>
-      <input type="text" class="form-control" id="category" formControlName="category"
-        placeholder="Categorie pratiquée" required>
+      <!-- <input type="text" class="form-control" id="category" formControlName="category"
+        placeholder="Categorie pratiquée" required> -->
+        <select class="form-control" name="category" id="category" formControlName="category"> 
+          <option class="badge" *ngFor="let category of categories" [value]="category" [ngClass]="{
+              'badge-success': category == 'gymkhana',
+              'badge-warning': category == 'formule 1',
+              'badge-info': category == 'rallye',
+              'badge-primary': category == 'nascar',
+              'badge-danger': category == 'drag'}">
+
+              {{ category | titlecase }}
+          </option>
+      </select> 
     </div>
 
 

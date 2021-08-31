@@ -21,6 +21,7 @@ import { DataService } from './services/data.service';
 import { FooterComponent } from './footer/footer.component';
 import { NewCarComponent } from './cars-list/new-car/new-car.component';
 import { NewDriverComponent } from './drivers-list/new-driver/new-driver.component';
+import { DataFromApiComponent } from './data-from-api/data-from-api.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { NewDriverComponent } from './drivers-list/new-driver/new-driver.compone
     DriversItemComponent,
     FooterComponent,
     NewCarComponent,
-    NewDriverComponent
+    NewDriverComponent,
+    DataFromApiComponent
   ],
   imports: [
     BrowserModule,

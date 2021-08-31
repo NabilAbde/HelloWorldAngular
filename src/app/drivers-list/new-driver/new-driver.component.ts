@@ -11,18 +11,22 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class NewDriverComponent implements OnInit {
 
+  categories :any;
+  minLong:number =2;
+
   driverForm! : FormGroup; // ! car mise a jour ne comprend pas si  undefined ou pas
 
   constructor(private data: DataService, private router: Router, private formBuilder : FormBuilder) { }
 
   ngOnInit(): void {
+    this.categories = this.data.getAllCategories;
 
    this.createForm();
   }
   createForm(){
     this.driverForm = this.formBuilder.group({
       fullName : ['', Validators.required],
-      pays : ['' , [Validators.required, Validators.minLength(2)]],
+      pays : ['' , [Validators.required, Validators.minLength(this.minLong)]],
       coverImage : ['' , Validators.required],
       category : ['' , Validators.required]
       
@@ -38,7 +42,9 @@ export class NewDriverComponent implements OnInit {
         formValue['coverImage'],
         formValue['category']
     )
-    console.log(driver);
+    // console.log(driver);
+    this.data.addDriver(driver);
+    this.router.navigate(['drivers']);
     
   }
 
