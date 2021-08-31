@@ -14,7 +14,7 @@ import { DriversListComponent } from './drivers-list/drivers-list.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { CarItemComponent } from './cars-list/car-item/car-item.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DriversItemComponent } from './drivers-list/drivers-item/drivers-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DataService } from './services/data.service';
@@ -39,6 +39,7 @@ import { NewCarComponent } from './cars-list/new-car/new-car.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     FontAwesomeModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: "fr-FR" }, DataService], // In providers array of @NgModule pour avoir la date en francais

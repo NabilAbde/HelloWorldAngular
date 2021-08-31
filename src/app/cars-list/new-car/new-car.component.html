@@ -6,16 +6,16 @@
             <label for="name">Nom de la voiture</label>
             <input type="text" class="form-control" id="name" name="name" ngModel required #name="ngModel" placeholder="Nom du véhicule">
        <div [hidden]="name.valid || name.pristine" 
-     class="alert alert-danger">
-  Veuillez renseigner le véhicule
+     class="alert alert-danger text-center">
+  Veuillez renseigner le véhicule 😜
 </div>
         </div>
         <div class="form-group">
             <label for="pays">Pays d'origine</label>
             <input type="text" class="form-control" id="pays" name="pays" ngModel required #pays="ngModel" placeholder="Pays">
 <div [hidden]="pays.valid || pays.pristine" 
-     class="alert alert-danger">
-  Veuillez renseigner le pays d'origine
+     class="alert alert-danger text-center">
+  Veuillez renseigner le pays d'origine 😜
 </div>
 
 
@@ -25,8 +25,8 @@
             <input type="text" class="form-control" id="coverImage" name="coverImage" ngModel required #coverImage="ngModel"
                 placeholder="Image">
 <div [hidden]="coverImage.valid || coverImage.pristine" 
-     class="alert alert-danger">
-  Veuillez renseigner une image valide
+     class="alert alert-danger text-center">
+  Veuillez renseigner une image valide 😜
 </div>
 
         </div>
@@ -34,16 +34,16 @@
             <label for="power">Puissance</label>
             <input type="number" class="form-control" id="power" name="power" ngModel required #power="ngModel" placeholder="Puissance en Cv">
        <div [hidden]="power.valid || power.pristine" 
-     class="alert alert-danger">
-  Veuillez renseigner la puissance du véhicule
+     class="alert alert-danger text-center">
+  Veuillez renseigner la puissance du véhicule 😎
 </div>
         </div>
         <div class="form-group">
             <label for="perf">Temps de 0 à 100 km/h</label>
             <input type="number" class="form-control" id="perf" name="perf" ngModel required #perf="ngModel" placeholder="Performance">
        <div [hidden]="perf.valid || perf.pristine" 
-     class="alert alert-danger">
-  Veuillez renseigner la performance de o à 100 km/h
+     class="alert alert-danger text-center">
+  Veuillez renseigner la performance de o à 100 km/h 😜
 </div>
         </div>
         <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary my-4">Enregistrer</button>
